@@ -1,6 +1,7 @@
 <?php
 
 use App\Post;
+use Carbon\Carbon;
 use Faker\Factory as Faker;
 use Illuminate\Database\Seeder;
 
@@ -15,6 +16,7 @@ class PostSeeder extends Seeder
                 'title' => $faker->sentence(),
                 'description' => $faker->sentence(35),
                 'image_url' => $faker->imageUrl(),
+                'created_at' => $faker->date('Y-m-d', Carbon::now()),
             ]);
         }
 
